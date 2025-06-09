@@ -10,10 +10,14 @@
 
   <ItemGroup>
     <None Remove="Resources\logo.webp" />
+    <None Remove="Resources\TBIcon.ico" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Resources\logo.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\TBIcon.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

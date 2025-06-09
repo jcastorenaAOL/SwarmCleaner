@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:SwarmCleaner"
         mc:Ignorable="d"
         WindowStyle="None"
+        Icon="/Resources/TBIcon.ico"
         Topmost="True"
         Background="Transparent"
         AllowsTransparency="True"
@@ -23,7 +24,7 @@
                     <TextBlock Text="!Swarm" Margin="5,0,0,0" VerticalAlignment="Center"/>
                 </StackPanel>
             </Button>
-            <Button Content="X" HorizontalAlignment="Left" Margin="271,10,0,0" VerticalAlignment="Top" Height="20" Width="17" Click="Button_Click"/>
+            <Button Content="X" HorizontalAlignment="Left" Margin="266,10,0,0" VerticalAlignment="Top" Height="20" Width="22" Click="Button_Click"/>
         </Grid>
     </Border>
 </Window>
