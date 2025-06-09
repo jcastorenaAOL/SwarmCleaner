@@ -17,40 +17,13 @@
             BorderBrush="Gray" BorderThickness="1"
             SnapsToDevicePixels="True">
         <Grid>
-            <Button Width="200" Height="100" Background="#FFFBE3FF" Click="RefreshSwarm">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}" 
-                    CornerRadius="10"
-                    BorderBrush="{TemplateBinding BorderBrush}" 
-                    BorderThickness="{TemplateBinding BorderThickness}">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-                <StackPanel Orientation="Horizontal">
+            <Button Width="200" Height="100" Click="SwarmClick">
+                <StackPanel Orientation="Horizontal" Width="131">
                     <Image Source="Resources/logo.webp" Width="64" Height="64" />
-                    <TextBlock Text="!SwarmII" Margin="5,0,0,0" VerticalAlignment="Center"/>
+                    <TextBlock Text="!Swarm" Margin="5,0,0,0" VerticalAlignment="Center"/>
                 </StackPanel>
-                <Button.Triggers>
-                    <EventTrigger RoutedEvent="Button.Click">
-                        <BeginStoryboard>
-                            <Storyboard>
-                                <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
-                      To="0.9" Duration="0:0:0.1" AutoReverse="True"/>
-                                <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"
-                      To="0.9" Duration="0:0:0.1" AutoReverse="True"/>
-                            </Storyboard>
-                        </BeginStoryboard>
-                    </EventTrigger>
-                </Button.Triggers>
-                <Button.RenderTransform>
-                    <ScaleTransform ScaleX="1" ScaleY="1"/>
-                </Button.RenderTransform>
             </Button>
-            
             <Button Content="X" HorizontalAlignment="Left" Margin="271,10,0,0" VerticalAlignment="Top" Height="20" Width="17" Click="Button_Click"/>
-           
         </Grid>
     </Border>
 </Window>

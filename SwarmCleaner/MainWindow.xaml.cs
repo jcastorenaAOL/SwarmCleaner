@@ -19,7 +19,7 @@ public partial class MainWindow : Window
 {
 
     List<Process> TBApps = new List<Process>();
-
+    Thread? refreshThread = null;
     public MainWindow()
     {
         InitializeComponent();
@@ -30,13 +30,18 @@ public partial class MainWindow : Window
         if (e.ChangedButton == MouseButton.Left)
             this.DragMove();
     }
+    void SwarmClick(object sender, RoutedEventArgs e)
+    {
+        Task.Run(() => RefreshSwarm());
+    }
+
 
     private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
     {
         Application.Current.Shutdown();
     }
 
-    private void RefreshSwarm(object sender, RoutedEventArgs e)
+    private void RefreshSwarm()
     {
 
         if (SwarmIsOpen())
